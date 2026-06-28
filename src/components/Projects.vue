@@ -50,6 +50,7 @@
 
 <script setup>
 import logoMobileApplication from '../assets/projects/logoMobileApplication.png'
+import logoLoanDefaultRiskAnalysis from '../assets/projects/LoanDefaultRiskAnalysis.png'
 
 const projects = [
   {
@@ -79,16 +80,17 @@ const projects = [
     link: '#'
   },
   {
-    title: 'Retail Sales Insight Report',
-    description: 'Segmented product and region performance to identify high-margin growth opportunities.',
+    title: 'Loan Default Risk Analysis',
+    description: 'Explored 255K+ loan records to identify borrower and loan factors linked to higher default risk.',
     type: 'Analytics Report',
     icon: 'mdi-cash-multiple',
-    tools: ['Python', 'Pandas', 'Power BI'],
+    logo: logoLoanDefaultRiskAnalysis,
+    tools: ['Pandas', 'Matplotlib','Seaborn'],
     metrics: [
-      { value: '25%', label: 'Growth' },
-      { value: '12', label: 'Regions' }
+      { value: '255,347', label: 'loan records' },
+      { value: '18', label: 'columns' }
     ],
-    link: '#'
+    link: 'https://github.com/kimhak-kimho/Loan-Default-Risk-Analysis'
   },
   {
     title: 'Operational KPI Automation',
