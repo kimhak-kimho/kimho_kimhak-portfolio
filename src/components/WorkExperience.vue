@@ -115,12 +115,12 @@ import workphoto09 from '../assets/Experience/workpho/workphoto09.jpg'
 import workphoto10 from '../assets/Experience/workpho/workphoto010.jpg'
 
 const workGallery = [
-  { id: 1, src: workphoto01, alt: 'NUBB work experience photo 1', caption: 'Work photo 1' },
-  { id: 2, src: workphoto02, alt: 'NUBB work experience photo 2', caption: 'Work photo 2' },
+  { id: 1, src: workphoto01, alt: 'NUBB work experience photo 1', caption: 'Coordinated with Verify.gov.kh' },
+  { id: 2, src: workphoto02, alt: 'NUBB work experience photo 2', caption: 'student enrollment' },
   { id: 3, src: workphoto03, alt: 'NUBB work experience photo 3', caption: 'Work photo 3' },
   { id: 4, src: workphoto04, alt: 'NUBB work experience photo 4', caption: 'Work photo 4' },
   { id: 5, src: workphoto05, alt: 'NUBB work experience photo 5', caption: 'Work photo 5' },
-  { id: 6, src: workphoto06, alt: 'NUBB work experience photo 6', caption: 'Work photo 6' },
+  { id: 6, src: workphoto06, alt: 'NUBB work experience photo 6', caption: 'Presented insights to university management' },
   { id: 7, src: workphoto07, alt: 'NUBB work experience photo 7', caption: 'Work photo 7' },
   { id: 8, src: workphoto08, alt: 'NUBB work experience photo 8', caption: 'Work photo 8' },
   { id: 9, src: workphoto09, alt: 'NUBB work experience photo 9', caption: 'Work photo 9' },
@@ -156,8 +156,8 @@ const items = [
         title: 'Reporting & Analytics',
         icon: 'mdi-chart-bar',
         items: [
-          'Prepared reports and data summaries using Excel Pivot Tables and charts',
-          'Built Excel and Power BI dashboards to support management decision-making',
+          'Prepared reports and data summaries using python jupyter notebooks for charting and analysis',
+          'Built Python-based dashboards to support management decision-making',
           'Produced weekly and monthly enrollment and performance summaries for leadership review',
           'Tracked key metrics such as intake, retention, and enrollment trends across departments',
           'Turned raw data into clear visual insights for staff and management presentations',
