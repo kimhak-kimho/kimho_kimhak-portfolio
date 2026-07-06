@@ -105,25 +105,15 @@
 // 3. Add images to the item below
 import workphoto01 from '../assets/Experience/workpho/workphoto01.jpg'
 import workphoto02 from '../assets/Experience/workpho/workphoto02.jpg'
-import workphoto03 from '../assets/Experience/workpho/workphoto03.jpg'
-import workphoto04 from '../assets/Experience/workpho/workphoto04.jpg'
 import workphoto05 from '../assets/Experience/workpho/workphoto05.jpg'
 import workphoto06 from '../assets/Experience/workpho/workphoto06.jpg'
-import workphoto07 from '../assets/Experience/workpho/workphoto07.jpg'
-import workphoto08 from '../assets/Experience/workpho/workphoto08.jpg'
-import workphoto09 from '../assets/Experience/workpho/workphoto09.jpg'
 import workphoto10 from '../assets/Experience/workpho/workphoto010.jpg'
 
 const workGallery = [
   { id: 1, src: workphoto01, alt: 'NUBB work experience photo 1', caption: 'Coordinated with Verify.gov.kh' },
   { id: 2, src: workphoto02, alt: 'NUBB work experience photo 2', caption: 'student enrollment' },
-  { id: 3, src: workphoto03, alt: 'NUBB work experience photo 3', caption: 'Work photo 3' },
-  { id: 4, src: workphoto04, alt: 'NUBB work experience photo 4', caption: 'Work photo 4' },
   { id: 5, src: workphoto05, alt: 'NUBB work experience photo 5', caption: 'Work photo 5' },
   { id: 6, src: workphoto06, alt: 'NUBB work experience photo 6', caption: 'Presented insights to university management' },
-  { id: 7, src: workphoto07, alt: 'NUBB work experience photo 7', caption: 'Work photo 7' },
-  { id: 8, src: workphoto08, alt: 'NUBB work experience photo 8', caption: 'Work photo 8' },
-  { id: 9, src: workphoto09, alt: 'NUBB work experience photo 9', caption: 'Work photo 9' },
   { id: 10, src: workphoto10, alt: 'NUBB work experience photo 10', caption: 'Work photo 10' },
 ]
 
@@ -141,51 +131,50 @@ const items = [
       { title: 'Full-Time Staff', duration: 'Based on strong performance' },
     ],
     responsibilityGroups: [
-      {
-        title: 'Data Collection & Management',
-        icon: 'mdi-database-outline',
-        items: [
-          'Collected, cleaned, and analyzed student enrollment data for reporting and decision-making',
-          'Assisted in student enrollment data entry and maintained accurate database records',
-          'Maintained data accuracy, consistency, and proper record management within the system',
-          'Validated operational datasets before submission to ensure completeness and quality',
-          'Supported daily data entry workflows and corrected inconsistencies across records',
-        ],
-      },
-      {
-        title: 'Reporting & Analytics',
-        icon: 'mdi-chart-bar',
-        items: [
-          'Prepared reports and data summaries using python jupyter notebooks for charting and analysis',
-          'Built Python-based dashboards to support management decision-making',
-          'Produced weekly and monthly enrollment and performance summaries for leadership review',
-          'Tracked key metrics such as intake, retention, and enrollment trends across departments',
-          'Turned raw data into clear visual insights for staff and management presentations',
-        ],
-      },
-      {
-        title: 'Operations & Process Improvement',
-        icon: 'mdi-cog-outline',
-        items: [
-          'Supported data tracking, performance monitoring, and daily operational processes',
-          'Improved reporting efficiency by reducing manual preparation time through better workflows',
-          'Helped streamline data collection, validation, and reporting procedures across teams',
-          'Contributed to better data consistency by following and improving internal standards',
-          'Supported operational reporting needs during peak enrollment and academic periods',
-        ],
-      },
-      {
-        title: 'Collaboration & Support',
-        icon: 'mdi-account-group-outline',
-        items: [
-          'Collaborated with team members to improve reporting efficiency and workflow processes',
-          'Worked with staff across departments to resolve data issues and reporting requests',
-          'Supported supervisors and colleagues with data lookups, summaries, and report preparation',
-          'Helped maintain smooth communication between data entry staff and reporting teams',
-          'Assisted in preparing materials for meetings, reviews, and internal planning sessions',
-        ],
-      },
+  {
+    title: 'Data Management',
+    icon: 'mdi-database-outline',
+    items: [
+      'Managed and maintained student records for all academic levels in the University Management System',
+      'Retrieved data using SQL (MySQL) for reporting, validation, and analysis',
+      'Cleaned and validated data to ensure accuracy, consistency, and completeness',
+      'Updated and maintained student records through regular data verification',
+      'Managed student registration, transfers, major changes, and academic status updates',
     ],
+  },
+  {
+    title: 'Data Analysis & Reporting',
+    icon: 'mdi-chart-bar',
+    items: [
+      'Analyzed enrollment, GPA, and academic performance data to identify semester and yearly trends',
+      'Prepared statistical reports, GPA reports, enrollment reports, and management summaries',
+      'Created charts and dashboards using Excel, Python (Pandas, Matplotlib, Jupyter Notebook), and Power BI',
+      'Developed reports and visualizations to support data-driven decision-making',
+      'Presented analytical findings and key insights to university management',
+    ],
+  },
+  {
+    title: 'Database Operations',
+    icon: 'mdi-cog-outline',
+    items: [
+      'Processed student data for enrollment, examinations, and academic records',
+      'Validated examination results and maintained accurate transcripts and academic records',
+      'Maintained and updated the student database to support daily university operations',
+      'Improved data quality through regular validation and maintenance',
+      'Supported academic reporting throughout each semester',
+    ],
+  },
+  {
+    title: 'Collaboration & Process Improvement',
+    icon: 'mdi-account-group-outline',
+    items: [
+      'Worked with academic and administrative departments to resolve data and reporting issues',
+      'Coordinated with Verify.gov.kh to verify graduate records and support degree certificate printing',
+      'Provided accurate reports and statistical data to support university management',
+      'Helped improve reporting processes and operational efficiency',
+    ],
+  },
+],  
   },
 ]
 </script>
