@@ -19,7 +19,6 @@ import { onBeforeUnmount, onMounted, ref } from 'vue'
 
 import Navigation from '../components/Navigation.vue'
 import HeroSection from '../components/HeroSection.vue'
-import AppPromoBanner from '../components/AppPromoBanner.vue'
 import Skills from '../components/Skills.vue'
 import ChartVisualization from '../components/ChartVisualization.vue'
 import Projects from '../components/Projects.vue'
