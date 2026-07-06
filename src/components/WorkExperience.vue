@@ -84,11 +84,15 @@
             </div>
 
             <div v-if="item.images?.length" class="entry-block">
-              <h4 class="block-title">Work Photos</h4>
+              <h4 class="block-title">Work Highlights</h4>
+              <p v-if="item.imagesDescription" class="block-description">{{ item.imagesDescription }}</p>
               <div class="entry-gallery">
                 <figure v-for="photo in item.images" :key="photo.id" class="gallery-item">
                   <img :src="photo.src" :alt="photo.alt || item.role" />
-                  <figcaption v-if="photo.caption">{{ photo.caption }}</figcaption>
+                  <figcaption v-if="photo.title || photo.description">
+                    <strong v-if="photo.title">{{ photo.title }}</strong>
+                    <span v-if="photo.description">{{ photo.description }}</span>
+                  </figcaption>
                 </figure>
               </div>
             </div>
@@ -107,14 +111,44 @@ import workphoto01 from '../assets/Experience/workpho/workphoto01.jpg'
 import workphoto02 from '../assets/Experience/workpho/workphoto02.jpg'
 import workphoto05 from '../assets/Experience/workpho/workphoto05.jpg'
 import workphoto06 from '../assets/Experience/workpho/workphoto06.jpg'
-import workphoto10 from '../assets/Experience/workpho/workphoto010.jpg'
+import workphoto10 from '../assets/Experience/workpho/myworkplace.jpg'
 
 const workGallery = [
-  { id: 1, src: workphoto01, alt: 'NUBB work experience photo 1', caption: 'Coordinated with Verify.gov.kh' },
-  { id: 2, src: workphoto02, alt: 'NUBB work experience photo 2', caption: 'student enrollment' },
-  { id: 5, src: workphoto05, alt: 'NUBB work experience photo 5', caption: 'Work photo 5' },
-  { id: 6, src: workphoto06, alt: 'NUBB work experience photo 6', caption: 'Presented insights to university management' },
-  { id: 10, src: workphoto10, alt: 'NUBB work experience photo 10', caption: 'Work photo 10' },
+  {
+    id: 1,
+    src: workphoto01,
+    alt: 'NUBB work experience photo 1',
+    title: 'Graduate Record Verification',
+    description: 'Coordinated with Verify.gov.kh',
+  },
+  {
+    id: 2,
+    src: workphoto02,
+    alt: 'NUBB work experience photo 2',
+    title: 'Student Enrollment Management',
+    description: 'Managed and updated student enrollment data',
+  },
+  {
+    id: 5,
+    src: workphoto05,
+    alt: 'NUBB work experience photo 5',
+    title: 'Data Analysis Meeting',
+    description: 'Analyzed enrollment and academic data with the team',
+  },
+  {
+    id: 6,
+    src: workphoto06,
+    alt: 'NUBB work experience photo 6',
+    title: 'Presentation',
+    description: 'Presented analytical reports to university management',
+  },
+  {
+    id: 10,
+    src: workphoto10,
+    alt: 'NUBB work experience photo 10',
+    title: 'Database Management Office',
+    description: 'Daily workplace for student data management and reporting',
+  },
 ]
 
 const items = [
@@ -125,6 +159,7 @@ const items = [
     year: '2023',
     isCurrent: true,
     images: workGallery,
+    imagesDescription: 'Visual highlights from data operations, reporting, and day-to-day university work.',
     progression: [
       { title: 'Weekend Volunteer', duration: '1 year 3 months' },
       { title: 'Weekend Staff', duration: '9 months' },
@@ -295,6 +330,14 @@ const items = [
   padding: 0.65rem 0.75rem;
   font-size: 0.8rem;
   color: var(--muted);
+  line-height: 1.45;
+}
+
+.gallery-item figcaption strong {
+  display: block;
+  color: var(--text);
+  font-size: 0.82rem;
+  margin-bottom: 0.15rem;
 }
 
 .entry-meta {
@@ -356,6 +399,13 @@ const items = [
   font-weight: 700;
   font-style: italic;
   color: var(--text);
+}
+
+.block-description {
+  margin: -0.5rem 0 1rem;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.6;
 }
 
 .progression-track {
