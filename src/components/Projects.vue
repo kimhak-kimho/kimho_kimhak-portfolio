@@ -3,7 +3,7 @@
     <div class="container">
       <div class="section-head" data-reveal>
         <h2 class="title">Data Analysis Projects</h2>
-        <p class="subtitle">Measurable impact through data-driven solutions and visual storytelling</p>
+        <p class="subtitle">Explore projects ranging from financial applications to interactive dashboards and predictive data analysis.</p>
         <div class="section-divider"></div>
       </div>
 

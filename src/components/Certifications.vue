@@ -32,7 +32,7 @@
           </div>
           <div class="stat-content">
             <div class="stat-value">Dichi Academy</div>
-            <div class="stat-label">Data Analysis with Python Certified</div>
+            <div class="stat-label">Data with Python</div>
           </div>
         </div>
       </div>

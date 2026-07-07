@@ -79,8 +79,8 @@ textarea:focus-visible {
 }
 
 .section {
-  padding: 2rem 0;
-  border-top: 1px solid rgba(77, 163, 255, 0.55);
+  padding: 1rem 0;
+  
 }
 
 .section-head {
