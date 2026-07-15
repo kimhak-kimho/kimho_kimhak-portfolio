@@ -58,7 +58,7 @@
 
 <script setup>
 import { onMounted, ref } from 'vue'
-import profileImage from '../assets/profile2026.png'
+import profileImage from '../assets/profile2026.jpg'
 
 const isLoaded = ref(false)
 

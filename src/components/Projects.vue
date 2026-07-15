@@ -68,18 +68,6 @@ const projects = [
     link: 'https://play.google.com/store/apps/details?id=com.jkinformation.interest_calculator'
   },
   {
-    title: 'Enrollment Performance Dashboard',
-    description: 'Tracked retention and intake trends for leadership decisions across multiple faculties.',
-    type: 'Data Dashboard',
-    icon: 'mdi-chart-line',
-    tools: ['Power BI', 'Excel', 'SQL'],
-    metrics: [
-      { value: '5', label: 'Faculties' },
-      { value: 'Weekly', label: 'Updates' }
-    ],
-    link: '#'
-  },
-  {
     title: 'Loan Default Risk Analysis',
     description: 'Explored 255K+ loan records to identify borrower and loan factors linked to higher default risk.',
     type: 'Analytics Report',
@@ -99,7 +87,7 @@ const projects = [
 /* Project Grid */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
 }
 
