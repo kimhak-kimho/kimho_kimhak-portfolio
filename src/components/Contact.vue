@@ -43,10 +43,10 @@
               <v-icon icon="mdi-email-outline" size="16" />
               Email Me
             </a>
-            <a :href="cvPdf" class="btn btn-secondary" download="KIMHO-KIMHAK-Data-Analyst.pdf">
+            <!-- <a :href="cvPdf" class="btn btn-secondary" download="KIMHO-KIMHAK-Data-Analyst.pdf">
               <v-icon icon="mdi-download" size="16" />
               Download CV
-            </a>
+            </a> -->
             <a
               href="https://www.linkedin.com/in/kimhak-kimho-7621b6266/"
               class="btn btn-secondary"
@@ -89,7 +89,6 @@
 </template>
 
 <script setup>
-import cvPdf from '../assets/download_CV/KIMHO KIMHAK.Data Analyst.pdf'
 
 const primaryContacts = [
   {

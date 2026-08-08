@@ -30,14 +30,14 @@
       <a v-for="item in links" :key="`m-${item.id}`" :href="`#${item.id}`" @click="mobileOpen = false">
         {{ item.label }}
       </a>
-      <a :href="cvPdf" download="KIMHO-KIMHAK-Data-Analyst.pdf" @click="mobileOpen = false">Download CV</a>
+      <!-- <a :href="cvPdf" download="KIMHO-KIMHAK-Data-Analyst.pdf" @click="mobileOpen = false">Download CV</a> -->
     </nav>
   </header>
 </template>
 
 <script setup>
 import { onMounted, onUnmounted, ref } from 'vue'
-import cvPdf from '../assets/download_CV/KIMHO KIMHAK.Data Analyst.pdf'
+// import cvPdf from '../assets/download_CV/KIMHO KIMHAK.Data Analyst.pdf'
 
 const links = [
   { id: 'overview', label: 'Home' },
