@@ -16,10 +16,10 @@
         </a>
       </nav>
 
-      <div class="nav-actions">
+      <!-- <div class="nav-actions">
         <a href="#experience" class="btn btn-secondary">View Work</a>
         <a :href="cvPdf" class="btn btn-primary" download="KIMHO-KIMHAK-Data-Analyst.pdf">Download CV</a>
-      </div>
+      </div> -->
 
       <button class="menu-btn" @click="mobileOpen = !mobileOpen" aria-label="Toggle navigation">
         <v-icon :icon="mobileOpen ? 'mdi-close' : 'mdi-menu'" size="22" />
