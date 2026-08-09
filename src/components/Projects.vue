@@ -62,7 +62,7 @@ const projects = [
     logo: logoMobileApplication,
     tools: ['Mobile App', 'Khmer UI', 'Finance Calculator'],
     metrics: [
-      { value: '500+', label: 'Downloads' },
+      { value: '1K+', label: 'Downloads' },
       { value: '4.5', label: 'Rating' }
     ],
     link: 'https://play.google.com/store/apps/details?id=com.jkinformation.interest_calculator'
