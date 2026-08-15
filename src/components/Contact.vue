@@ -113,7 +113,7 @@ const primaryContacts = [
 ]
 
 const hrSummary = [
-  'Education: IT, National University of Battambang (Year 4)',
+  'Education: IT, National University of Battambang',
   'Experience: Data Coordinator at NUBB (2023 – Present)',
   'Certification: Data Analysis with Python (2026)',
   'Certification: AWS Cloud Practitioner (2024)',

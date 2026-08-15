@@ -48,7 +48,7 @@ const items = [
     program: 'Information Technology',
     period: '2021 – Present',
     year: '2021',
-    detail: 'Year 4 – Semester 2',
+    detail: '25 July 2026',
     isCurrent: true,
   },
   {
