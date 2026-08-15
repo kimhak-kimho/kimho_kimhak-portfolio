@@ -29,7 +29,7 @@
           <span class="gradient-text hero-line">KIMHAK</span>
         </h1>
 
-        <p class="pro-summary hero-animate-item">I am a Data Coordinator with experience in data management, reporting, and analysis. At the National University of Battambang, I work with student and academic data, ensuring data accuracy and creating reports to support decision-making. I use SQL, Python, Excel, and Power BI to analyze data and build dashboards. I am looking for an opportunity to apply my data skills in the banking sector as a Data Analyst, supporting business insights and strategic decisions.</p>
+        <p class="pro-summary hero-animate-item">I am a Data Coordinator with experience in data management, reporting, data extraction, and analysis. At the National University of Battambang, I work with student and academic data, ensuring data accuracy, integrity, and reliable reporting. I use SQL, MySQL, Excel, Power BI, and Python to clean, analyze, and visualize data and develop reports and dashboards. I am passionate about using data and technology to improve processes, support decision-making, and create meaningful insights.</p>
 
         <div class="hero-cta hero-animate-item">
           <a class="btn btn-primary hero-btn" href="#projects">Learn More</a>
