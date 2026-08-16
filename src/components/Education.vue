@@ -46,11 +46,20 @@ const items = [
   {
     school: 'National University of Battambang',
     program: 'Information Technology',
-    period: '2021 – Present',
-    year: '2021',
+    period: '2022 – 2026',
+    year: '2022',
     detail: 'Graduated: 25 July 2026',
-    isCurrent: true,
+    isCurrent: false,
   },
+    {
+    school: 'National University of Battambang',
+    program: '•	Finance and Banking',
+    period: '2021 – 2023',
+    year: '2021',
+    detail: 'Completed two years of coursework',
+    isCurrent: false,
+  },
+  
   {
     school: 'Rongko Highschool',
     program: null,
