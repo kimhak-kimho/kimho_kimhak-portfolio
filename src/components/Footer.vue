@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <div class="container wrap">
-      <p>© {{ year }} Kimhak - Data Analyst</p>
+      <p>© {{ year }} kimho kimhak - Data Analyst </p>
       <div class="socials">
         <a href="https://www.facebook.com/kimho.kimhak/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
           <span>Facebook</span>
