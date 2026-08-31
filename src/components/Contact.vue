@@ -3,7 +3,7 @@
     <div class="container">
       <div class="section-head" data-reveal>
         <h2 class="title">Contact</h2>
-        <p class="subtitle">Open to Data Analyst opportunities — quick details for HR and recruiters</p>
+        <p class="subtitle">Open to opportunities — quick details for HR and recruiters</p>
         <div class="section-divider"></div>
       </div>
 
