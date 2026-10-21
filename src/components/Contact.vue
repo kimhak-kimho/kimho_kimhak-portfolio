@@ -2,7 +2,7 @@
   <section id="contact" class="section">
     <div class="container">
       <div class="section-head" data-reveal>
-        <h2 class="title">Contact</h2>
+        <h2 class="title">Contact Me</h2>
         <p class="subtitle">Open to opportunities — quick details for HR and recruiters</p>
         <div class="section-divider"></div>
       </div>
@@ -114,7 +114,7 @@ const primaryContacts = [
 
 const hrSummary = [
   'Education: IT, National University of Battambang',
-  'Experience: Data Coordinator at NUBB (2023 – Present)',
+  'Experience: Data Coordinator at NUBB (September 2023 – October 2026)',
   'Certification: Data Analysis with Python (2026)',
   'Certification: AWS Cloud Practitioner (2024)',
   'Tools: SQL, Python, Excel, Power BI',

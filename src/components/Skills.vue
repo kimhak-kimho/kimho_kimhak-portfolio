@@ -1,16 +1,22 @@
 ﻿<template>
-  <section id="skills" class="section">
+  <section id="skills" class="section skills">
     <div class="container">
       <div class="section-head" data-reveal>
         <h2 class="title">Technical Skills</h2>
-        <p class="subtitle">Core analytics tools and methodologies used to deliver data-driven outcomes.</p>
+        <p class="subtitle">Tools I use to clean, analyze, and report data.</p>
         <div class="section-divider"></div>
       </div>
 
       <div class="skills-listing">
-        <article v-for="skill in skills" :key="skill.name" class="skill-card" data-reveal>
+        <article
+          v-for="(skill, index) in skills"
+          :key="skill.name"
+          class="skill-card"
+          data-reveal
+          :style="{ '--reveal-delay': `${index * 0.06}s` }"
+        >
           <div class="skill-card-header">
-            <div class="skill-pill">{{ skill.abbrev }}</div>
+            <span class="skill-pill">{{ skill.abbrev }}</span>
             <h3>{{ skill.name }}</h3>
           </div>
           <p>{{ skill.details }}</p>
@@ -41,109 +47,89 @@ const skills = [
     name: 'Power BI',
     abbrev: 'BI',
     details: 'Dashboards, Data Visualization',
-  }
+  },
 ]
 </script>
 
 <style scoped>
-.eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.6rem 1.1rem;
-  border-radius: 999px;
-  border: 1px solid rgba(56, 189, 248, 0.2);
-  background: rgba(56, 189, 248, 0.08);
-  color: var(--primary);
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-
-.title {
-  margin-top: 0;
-}
-
-.subtitle {
-  margin: 1rem auto 0;
-  color: var(--muted);
-  font-size: 0.96rem;
-  max-width: 680px;
+.skills {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 .skills-listing {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.5rem;
-  margin-top: 2.5rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
 }
 
 .skill-card {
-  padding: 1.75rem;
-  background: rgba(10, 20, 45, 0.85);
-  border: 1px solid rgba(56, 189, 248, 0.12);
-  border-radius: 22px;
-  box-shadow: 0 18px 40px rgba(6, 17, 55, 0.18);
-  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  padding: 1.25rem 1.2rem;
+  background: rgba(18, 28, 51, 0.55);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  transition: border-color 0.25s ease, background 0.25s ease;
 }
 
 .skill-card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(56, 189, 248, 0.28);
-  box-shadow: 0 28px 70px rgba(6, 17, 55, 0.2);
+  border-color: var(--border-strong);
+  background: rgba(26, 39, 66, 0.65);
 }
 
 .skill-card-header {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
+  gap: 0.75rem;
+  margin-bottom: 0.7rem;
 }
 
 .skill-pill {
-  min-width: 44px;
-  height: 44px;
+  min-width: 40px;
+  height: 40px;
   display: grid;
   place-items: center;
-  border-radius: 14px;
-  background: rgba(56, 189, 248, 0.16);
-  color: var(--primary);
+  border-radius: 10px;
+  background: rgba(77, 163, 255, 0.12);
+  border: 1px solid rgba(77, 163, 255, 0.22);
+  color: var(--primary-2);
+  font-size: 0.75rem;
   font-weight: 700;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
 }
 
 .skill-card h3 {
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   font-weight: 700;
+  color: var(--text);
 }
 
 .skill-card p {
   margin: 0;
-  line-height: 1.75;
+  line-height: 1.55;
   color: var(--muted);
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 @media (max-width: 980px) {
   .skills-listing {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 520px) {
+  .skills {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .skills-listing {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
   .skill-card {
-    padding: 1.25rem;
-    border-radius: 16px;
-  }
-
-  .skill-card h3 {
-    font-size: 1.05rem;
-  }
-
-  .skill-card p {
-    font-size: 0.92rem;
+    padding: 1.1rem 1rem;
   }
 }
 </style>

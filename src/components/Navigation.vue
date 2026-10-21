@@ -46,7 +46,7 @@ const links = [
   { id: 'experience', label: 'Experience' },
   { id: 'education', label: 'Education' },
   { id: 'certifications', label: 'Certifications' },
-  { id: 'contact', label: 'Contact' }
+  { id: 'contact', label: 'Contact Me' }
 ]
 
 const isScrolled = ref(false)

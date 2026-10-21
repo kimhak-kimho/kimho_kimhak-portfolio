@@ -2,8 +2,8 @@
   <section id="projects" class="section">
     <div class="container">
       <div class="section-head" data-reveal>
-        <h2 class="title">Data Analysis Projects</h2>
-        <p class="subtitle">Explore projects ranging from financial applications to interactive dashboards and predictive data analysis.</p>
+        <h2 class="title">Projects</h2>
+        <p class="subtitle">Mobile apps, automation tools, and data analysis work.</p>
         <div class="section-divider"></div>
       </div>
 
@@ -49,7 +49,12 @@
 </template>
 
 <script setup>
-import logoMobileApplication from '../assets/projects/logoMobileApplication.png'
+import logoInterestCalculator from '../assets/interestCalculator.png'
+import logoSavingPlan from '../assets/savingPlan.jpg'
+import logoPhotoReport from '../assets/photoreport.png'
+import logoLoanRiskAnalyzer from '../assets/LoanRiskAnalyzer.png'
+import logoVirusDetection from '../assets/NUBBVirusDetection.jpg'
+import logoAcademicAffairs from '../assets/Academic Affairs Office.jpg'
 import logoLoanDefaultRiskAnalysis from '../assets/projects/LoanDefaultRiskAnalysis.png'
 
 const projects = [
@@ -59,7 +64,77 @@ const projects = [
       'A Play Store mobile app that helps users quickly calculate interest, credit, and savings. Supports simple and compound interest, monthly or annual rates, Khmer UI, and clear result summaries for everyday users and finance professionals.',
     type: 'Mobile Application',
     icon: 'mdi-calculator-variant-outline',
-    logo: logoMobileApplication,
+    logo: logoInterestCalculator,
+    tools: ['Mobile App', 'Khmer UI', 'Finance Calculator'],
+    metrics: [
+      { value: '1K+', label: 'Downloads' },
+      { value: '4.5', label: 'Rating' }
+    ],
+    link: 'https://play.google.com/store/apps/details?id=com.jkinformation.interest_calculator'
+  },
+  {
+    title: 'Loan Risk Analyzer',
+    description:
+      'A Flutter app that helps Cambodian users estimate how much they can borrow and how risky a loan looks for their budget.It is an educational estimate only. It is not a bank or MFI, and it never approves or rejects a loan.',
+    type: 'Mobile Application',
+    icon: 'mdi-calculator-variant-outline',
+    logo: logoLoanRiskAnalyzer,
+    tools: ['Version: 1.0.0', 'Khmer UI', 'Finance Calculator'],
+    metrics: [
+      { value: '1K+', label: 'Downloads' },
+      { value: '4.5', label: 'Rating' }
+    ],
+    link: 'https://play.google.com/store/apps/details?id=com.jkinformation.interest_calculator'
+  },
+  {
+    title: 'Saving Plan App',
+    description:
+      'A savings planning app that helps users set goals, track progress, and build better money habits with clear visual summaries in Khmer.',
+    type: 'Mobile Application',
+    icon: 'mdi-piggy-bank-outline',
+    logo: logoSavingPlan,
+    tools: ['Mobile App', 'Khmer UI', 'Savings Planner'],
+    metrics: [
+      { value: '1K+', label: 'Downloads' },
+      { value: '4.5', label: 'Rating' }
+    ],
+    link: 'https://play.google.com/store/apps/details?id=com.jkinformation.interest_calculator'
+  },
+  {
+    title: 'Photos Report',
+    description:
+      'A photo report app for capturing visual evidence and turning field photos into clear, structured reports.',
+    type: 'Mobile Application',
+    icon: 'mdi-camera-outline',
+    logo: logoPhotoReport,
+    tools: ['Mobile App', 'Khmer UI', 'Photo Report'],
+    metrics: [
+      { value: '1K+', label: 'Downloads' },
+      { value: '4.5', label: 'Rating' }
+    ],
+    link: 'https://play.google.com/store/apps/details?id=com.jkinformation.interest_calculator'
+  },
+  {
+    title: 'Telegram Group Virus Detection Bot',
+    description:
+      'Automatically scans every file uploaded to a Telegram group with ClamAV, deletes infected files, and never falsely reports a file as safe if the scanner is unavailable.',
+    type: 'TelegramBot',
+    icon: 'mdi-calculator-variant-outline',
+    logo: logoVirusDetection,
+    tools: ['Mobile App', 'Khmer UI', 'Finance Calculator'],
+    metrics: [
+      { value: '1K+', label: 'Downloads' },
+      { value: '4.5', label: 'Rating' }
+    ],
+    link: 'https://play.google.com/store/apps/details?id=com.jkinformation.interest_calculator'
+  },
+  {
+    title: 'NUBB-Sent-academic-result-2025-2026',
+    description:
+      'Automatically scans every file uploaded to a Telegram group with ClamAV, deletes infected files, and never falsely reports a file as safe if the scanner is unavailable.',
+    type: 'TelegramBot',
+    icon: 'mdi-calculator-variant-outline',
+    logo: logoAcademicAffairs,
     tools: ['Mobile App', 'Khmer UI', 'Finance Calculator'],
     metrics: [
       { value: '1K+', label: 'Downloads' },

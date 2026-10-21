@@ -155,9 +155,9 @@ const items = [
   {
     role: 'Data Coordinator / Staff',
     company: 'National University of Battambang, Battambang',
-    period: 'September 2023 – Present',
+    period: 'September 2023 – October 2026',
     year: '2023',
-    isCurrent: true,
+    isCurrent: false,
     images: workGallery,
     imagesDescription: 'Visual highlights from data operations, reporting, and day-to-day university work.',
     progression: [
@@ -165,51 +165,14 @@ const items = [
       { title: 'Weekend Staff', duration: '9 months' },
       { title: 'Full-Time Staff', duration: 'Based on strong performance' },
     ],
-    responsibilityGroups: [
-  {
-    title: 'Data Management',
-    icon: 'mdi-database-outline',
-    items: [
-      'Managed and maintained student records for all academic levels in the University Management System',
-      'Retrieved data using SQL (MySQL) for reporting, validation, and analysis',
-      'Cleaned and validated data to ensure accuracy, consistency, and completeness',
-      'Updated and maintained student records through regular data verification',
-      'Managed student registration, transfers, major changes, and academic status updates',
+    responsibilities: [
+      'Managed and validated student datasets to ensure accuracy, completeness, and consistency.',
+      'Used MySQL/SQL to extract, clean, and analyze data for operational and management reporting.',
+      'Prepared reports and dashboards (Excel, Python, Power BI) to support university decision-making.',
+      'Coordinated with Verify.gov.kh to verify graduate records and support degree certificate printing.',
+      'Managed student enrollment updates, transfers, and academic status changes in the university system.',
+      'Collaborated with academic and admin teams to resolve data issues and improve reporting processes.',
     ],
-  },
-  {
-    title: 'Data Analysis & Reporting',
-    icon: 'mdi-chart-bar',
-    items: [
-      'Analyzed enrollment, GPA, and academic performance data to identify semester and yearly trends',
-      'Prepared statistical reports, GPA reports, enrollment reports, and management summaries',
-      'Created charts and dashboards using Excel, Python (Pandas, Matplotlib, Jupyter Notebook), and Power BI',
-      'Developed reports and visualizations to support data-driven decision-making',
-      'Presented analytical findings and key insights to university management',
-    ],
-  },
-  {
-    title: 'Database Operations',
-    icon: 'mdi-cog-outline',
-    items: [
-      'Processed student data for enrollment, examinations, and academic records',
-      'Validated examination results and maintained accurate transcripts and academic records',
-      'Maintained and updated the student database to support daily university operations',
-      'Improved data quality through regular validation and maintenance',
-      'Supported academic reporting throughout each semester',
-    ],
-  },
-  {
-    title: 'Collaboration & Process Improvement',
-    icon: 'mdi-account-group-outline',
-    items: [
-      'Worked with academic and administrative departments to resolve data and reporting issues',
-      'Coordinated with Verify.gov.kh to verify graduate records and support degree certificate printing',
-      'Provided accurate reports and statistical data to support university management',
-      'Helped improve reporting processes and operational efficiency',
-    ],
-  },
-],  
   },
 ]
 </script>
