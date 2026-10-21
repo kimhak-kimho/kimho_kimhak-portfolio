@@ -30,110 +30,30 @@
             <img :src="profileImage" alt="Kimhak profile photo" class="avatar" />
           </div>
         </div>
-
-        <div
-          v-if="slidePhotos.length"
-          class="photo-strip"
-          @mouseenter="pauseSlide"
-          @mouseleave="resumeSlide"
-        >
-          <div class="photo-strip-frame">
-            <img
-              v-for="(src, index) in slidePhotos"
-              :key="src"
-              :src="src"
-              alt=""
-              class="photo-strip-img"
-              :class="{ 'is-active': index === slideIndex }"
-            />
-          </div>
-          <div class="photo-strip-dots" aria-hidden="true">
-            <button
-              v-for="(_, index) in slidePhotos"
-              :key="index"
-              type="button"
-              class="photo-dot"
-              :class="{ 'is-active': index === slideIndex }"
-              :aria-label="`Show photo ${index + 1}`"
-              @click="goToSlide(index)"
-            ></button>
-          </div>
-        </div>
       </aside>
     </div>
   </section>
 </template>
 
 <script setup>
-import { onBeforeUnmount, onMounted, ref } from 'vue'
+import { onMounted, ref } from 'vue'
 import profileImage from '../assets/profile2026.jpg'
 
-const slideModules = import.meta.glob('../assets/photosSlide/*.{jpg,JPG,jpeg,JPEG}', {
-  eager: true,
-  import: 'default',
-})
-
-const slidePhotos = Object.entries(slideModules)
-  .filter(([path]) => !path.includes('('))
-  .sort(([a], [b]) => a.localeCompare(b))
-  .map(([, src]) => src)
-  .slice(0, 8)
-
 const isLoaded = ref(false)
-const slideIndex = ref(0)
-const isPaused = ref(false)
-
-let slideTimer
-
-const nextSlide = () => {
-  if (!slidePhotos.length || isPaused.value) return
-  slideIndex.value = (slideIndex.value + 1) % slidePhotos.length
-}
-
-const goToSlide = (index) => {
-  slideIndex.value = index
-}
-
-const pauseSlide = () => {
-  isPaused.value = true
-}
-
-const resumeSlide = () => {
-  isPaused.value = false
-}
-
-const startSlideshow = () => {
-  stopSlideshow()
-  if (slidePhotos.length < 2) return
-  slideTimer = window.setInterval(nextSlide, 4500)
-}
-
-const stopSlideshow = () => {
-  if (slideTimer) {
-    window.clearInterval(slideTimer)
-    slideTimer = undefined
-  }
-}
 
 onMounted(() => {
   requestAnimationFrame(() => {
     isLoaded.value = true
   })
-  startSlideshow()
-})
-
-onBeforeUnmount(() => {
-  stopSlideshow()
 })
 </script>
 
 <style scoped>
 .hero {
   position: relative;
-  padding: 2.75rem 0 3.25rem;
+  padding: 2.75rem 0 2rem;
   overflow: hidden;
 }
-
 
 .hero-bg {
   position: absolute;
@@ -231,12 +151,10 @@ onBeforeUnmount(() => {
 
 .hero-side {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
+  justify-content: center;
+  justify-self: end;
   width: 100%;
   max-width: 360px;
-  justify-self: end;
 }
 
 .avatar-stage {
@@ -260,59 +178,6 @@ onBeforeUnmount(() => {
   border-radius: 50%;
   display: block;
   border: 3px solid rgba(8, 15, 31, 0.85);
-}
-
-.photo-strip {
-  width: 100%;
-}
-
-.photo-strip-frame {
-  position: relative;
-  width: 100%;
-  height: 148px;
-  border-radius: 14px;
-  overflow: hidden;
-  border: 1px solid var(--border);
-  background: rgba(12, 22, 38, 0.65);
-  box-shadow: 0 10px 28px rgba(2, 8, 20, 0.28);
-}
-
-.photo-strip-img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 35%;
-  opacity: 0;
-  transition: opacity 0.85s ease;
-}
-
-.photo-strip-img.is-active {
-  opacity: 1;
-}
-
-.photo-strip-dots {
-  display: flex;
-  justify-content: center;
-  gap: 0.4rem;
-  margin-top: 0.65rem;
-}
-
-.photo-dot {
-  width: 7px;
-  height: 7px;
-  padding: 0;
-  border: none;
-  border-radius: 50%;
-  background: rgba(148, 180, 210, 0.35);
-  cursor: pointer;
-  transition: background 0.2s ease, transform 0.2s ease;
-}
-
-.photo-dot.is-active {
-  background: var(--primary-2);
-  transform: scale(1.25);
 }
 
 .hero-animate,
@@ -382,10 +247,6 @@ onBeforeUnmount(() => {
     opacity: 1 !important;
     transform: none !important;
   }
-
-  .photo-strip-img {
-    transition: none;
-  }
 }
 
 @media (max-width: 900px) {
@@ -418,15 +279,11 @@ onBeforeUnmount(() => {
     order: -1;
     margin-left: auto;
     margin-right: auto;
-    max-width: min(340px, 100%);
+    justify-self: center;
   }
 
   .avatar-wrap {
     width: min(240px, 68vw);
-  }
-
-  .photo-strip-frame {
-    height: 140px;
   }
 }
 
@@ -446,10 +303,6 @@ onBeforeUnmount(() => {
 
   .hero-cta .btn {
     width: 100%;
-  }
-
-  .photo-strip-frame {
-    height: 120px;
   }
 
   .avatar-wrap {
