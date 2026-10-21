@@ -4,9 +4,36 @@
       <div class="section-head" data-reveal>
         <h2 class="title">Work Experience</h2>
         <p class="subtitle">
-          Data-driven career progression with measurable impact and continuous growth
+          From weekend volunteer to full-time staff at NUBB
         </p>
         <div class="section-divider"></div>
+      </div>
+
+      <div class="career-progress card" data-reveal>
+        <h3 class="block-title">Career Progression</h3>
+        <div class="progression-track">
+          <div
+            v-for="(step, stepIndex) in careerProgress"
+            :key="step.title"
+            class="progression-step"
+          >
+            <div class="step-node">
+              <span
+                class="step-dot"
+                :class="{ 'is-active': stepIndex === careerProgress.length - 1 }"
+              ></span>
+              <span
+                v-if="stepIndex < careerProgress.length - 1"
+                class="step-line"
+              ></span>
+            </div>
+            <div class="step-content">
+              <strong>{{ step.title }}</strong>
+              <span>{{ step.role }}</span>
+              <span class="step-period">{{ step.duration }}</span>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="timeline">
@@ -36,26 +63,6 @@
                 </p>
               </div>
             </header>
-
-            <div v-if="item.progression?.length" class="entry-block">
-              <h4 class="block-title">Career Progression</h4>
-              <div class="progression-track">
-                <div
-                  v-for="(step, stepIndex) in item.progression"
-                  :key="step.title"
-                  class="progression-step"
-                >
-                  <div class="step-node">
-                    <span class="step-dot" :class="{ 'is-active': stepIndex === item.progression.length - 1 }"></span>
-                    <span v-if="stepIndex < item.progression.length - 1" class="step-line"></span>
-                  </div>
-                  <div class="step-content">
-                    <strong>{{ step.title }}</strong>
-                    <span>{{ step.duration }}</span>
-                  </div>
-                </div>
-              </div>
-            </div>
 
             <div v-if="item.responsibilityGroups?.length" class="entry-block">
               <h4 class="block-title">Key Responsibilities</h4>
@@ -151,6 +158,24 @@ const workGallery = [
   },
 ]
 
+const careerProgress = [
+  {
+    title: 'Weekend Volunteer',
+    role: 'National University of Battambang',
+    duration: '1 year 3 months',
+  },
+  {
+    title: 'Weekend Staff',
+    role: 'National University of Battambang',
+    duration: '9 months',
+  },
+  {
+    title: 'Full-Time Staff',
+    role: 'Data Coordinator / Staff',
+    duration: 'Based on strong performance',
+  },
+]
+
 const items = [
   {
     role: 'Data Coordinator / Staff',
@@ -160,11 +185,6 @@ const items = [
     isCurrent: false,
     images: workGallery,
     imagesDescription: 'Visual highlights from data operations, reporting, and day-to-day university work.',
-    progression: [
-      { title: 'Weekend Volunteer', duration: '1 year 3 months' },
-      { title: 'Weekend Staff', duration: '9 months' },
-      { title: 'Full-Time Staff', duration: 'Based on strong performance' },
-    ],
     responsibilities: [
       'Managed and validated student datasets to ensure accuracy, completeness, and consistency.',
       'Used MySQL/SQL to extract, clean, and analyze data for operational and management reporting.',
@@ -178,6 +198,12 @@ const items = [
 </script>
 
 <style scoped>
+.career-progress {
+  padding: 1.35rem 1.5rem 1.5rem;
+  margin-bottom: 2rem;
+  border-top: 3px solid rgba(77, 163, 255, 0.45);
+}
+
 .timeline {
   width: 100%;
   position: relative;
@@ -357,7 +383,7 @@ const items = [
 }
 
 .block-title {
-  margin: 0 0 1rem;
+  margin: 0 0 1.1rem;
   font-size: 0.95rem;
   font-weight: 700;
   font-style: italic;
@@ -383,6 +409,8 @@ const items = [
   align-items: center;
   text-align: center;
   gap: 0.75rem;
+  border-radius: 12px;
+  padding: 0.35rem;
 }
 
 .step-node {
@@ -418,15 +446,20 @@ const items = [
 .step-content {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  gap: 0.2rem;
   font-size: 0.85rem;
   color: var(--muted);
-  line-height: 1.5;
+  line-height: 1.45;
 }
 
 .step-content strong {
   color: var(--text);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
+}
+
+.step-period {
+  font-size: 0.78rem;
+  opacity: 0.85;
 }
 
 .responsibility-groups {

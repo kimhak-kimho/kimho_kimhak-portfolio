@@ -25,8 +25,39 @@
       </div>
 
       <aside class="hero-side hero-animate-side">
-        <div class="avatar-wrap">
-          <img :src="profileImage" alt="Kimhak profile photo" class="avatar" />
+        <div class="avatar-stage">
+          <div class="avatar-wrap">
+            <img :src="profileImage" alt="Kimhak profile photo" class="avatar" />
+          </div>
+        </div>
+
+        <div
+          v-if="slidePhotos.length"
+          class="photo-strip"
+          @mouseenter="pauseSlide"
+          @mouseleave="resumeSlide"
+        >
+          <div class="photo-strip-frame">
+            <img
+              v-for="(src, index) in slidePhotos"
+              :key="src"
+              :src="src"
+              alt=""
+              class="photo-strip-img"
+              :class="{ 'is-active': index === slideIndex }"
+            />
+          </div>
+          <div class="photo-strip-dots" aria-hidden="true">
+            <button
+              v-for="(_, index) in slidePhotos"
+              :key="index"
+              type="button"
+              class="photo-dot"
+              :class="{ 'is-active': index === slideIndex }"
+              :aria-label="`Show photo ${index + 1}`"
+              @click="goToSlide(index)"
+            ></button>
+          </div>
         </div>
       </aside>
     </div>
@@ -34,24 +65,75 @@
 </template>
 
 <script setup>
-import { onMounted, ref } from 'vue'
+import { onBeforeUnmount, onMounted, ref } from 'vue'
 import profileImage from '../assets/profile2026.jpg'
 
+const slideModules = import.meta.glob('../assets/photosSlide/*.{jpg,JPG,jpeg,JPEG}', {
+  eager: true,
+  import: 'default',
+})
+
+const slidePhotos = Object.entries(slideModules)
+  .filter(([path]) => !path.includes('('))
+  .sort(([a], [b]) => a.localeCompare(b))
+  .map(([, src]) => src)
+  .slice(0, 8)
+
 const isLoaded = ref(false)
+const slideIndex = ref(0)
+const isPaused = ref(false)
+
+let slideTimer
+
+const nextSlide = () => {
+  if (!slidePhotos.length || isPaused.value) return
+  slideIndex.value = (slideIndex.value + 1) % slidePhotos.length
+}
+
+const goToSlide = (index) => {
+  slideIndex.value = index
+}
+
+const pauseSlide = () => {
+  isPaused.value = true
+}
+
+const resumeSlide = () => {
+  isPaused.value = false
+}
+
+const startSlideshow = () => {
+  stopSlideshow()
+  if (slidePhotos.length < 2) return
+  slideTimer = window.setInterval(nextSlide, 4500)
+}
+
+const stopSlideshow = () => {
+  if (slideTimer) {
+    window.clearInterval(slideTimer)
+    slideTimer = undefined
+  }
+}
 
 onMounted(() => {
   requestAnimationFrame(() => {
     isLoaded.value = true
   })
+  startSlideshow()
+})
+
+onBeforeUnmount(() => {
+  stopSlideshow()
 })
 </script>
 
 <style scoped>
 .hero {
   position: relative;
-  padding: 3.5rem 0 5rem;
+  padding: 2.75rem 0 3.25rem;
   overflow: hidden;
 }
+
 
 .hero-bg {
   position: absolute;
@@ -64,8 +146,8 @@ onMounted(() => {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 60% 50% at 80% 30%, rgba(77, 163, 255, 0.1), transparent 65%),
-    radial-gradient(ellipse 50% 40% at 10% 80%, rgba(45, 212, 191, 0.06), transparent 60%);
+    radial-gradient(ellipse 55% 55% at 78% 42%, rgba(77, 163, 255, 0.14), transparent 62%),
+    radial-gradient(ellipse 45% 40% at 12% 70%, rgba(45, 212, 191, 0.07), transparent 58%);
 }
 
 .hero-grid {
@@ -76,23 +158,25 @@ onMounted(() => {
     linear-gradient(90deg, rgba(148, 180, 210, 0.05) 1px, transparent 1px);
   background-size: 56px 56px;
   mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, #000 10%, transparent 72%);
-  opacity: 0.5;
+  opacity: 0.45;
 }
 
 .hero-grid-layout {
   position: relative;
   z-index: 1;
+  width: min(1180px, calc(100% - 2rem));
   display: grid;
-  grid-template-columns: minmax(280px, 1fr) minmax(260px, 380px);
-  gap: 2.5rem;
+  grid-template-columns: minmax(300px, 1.05fr) minmax(280px, 0.9fr);
+  gap: clamp(1.25rem, 3vw, 2rem);
   align-items: center;
 }
 
 .hero-copy {
-  max-width: 34rem;
+  max-width: 36rem;
   display: flex;
   flex-direction: column;
   gap: 0;
+  justify-content: center;
 }
 
 .hero-role {
@@ -147,16 +231,26 @@ onMounted(() => {
 
 .hero-side {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 360px;
+  justify-self: end;
+}
+
+.avatar-stage {
+  animation: avatarFloat 7s ease-in-out infinite;
 }
 
 .avatar-wrap {
-  width: min(340px, 100%);
+  width: min(300px, 100%);
   aspect-ratio: 1;
   border-radius: 50%;
   padding: 5px;
   background: linear-gradient(145deg, rgba(107, 196, 255, 0.55), rgba(45, 212, 191, 0.25));
   box-shadow: 0 18px 40px rgba(2, 8, 20, 0.35);
+  animation: avatarPulse 5s ease-in-out infinite;
 }
 
 .avatar {
@@ -166,6 +260,59 @@ onMounted(() => {
   border-radius: 50%;
   display: block;
   border: 3px solid rgba(8, 15, 31, 0.85);
+}
+
+.photo-strip {
+  width: 100%;
+}
+
+.photo-strip-frame {
+  position: relative;
+  width: 100%;
+  height: 148px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: rgba(12, 22, 38, 0.65);
+  box-shadow: 0 10px 28px rgba(2, 8, 20, 0.28);
+}
+
+.photo-strip-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  opacity: 0;
+  transition: opacity 0.85s ease;
+}
+
+.photo-strip-img.is-active {
+  opacity: 1;
+}
+
+.photo-strip-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-top: 0.65rem;
+}
+
+.photo-dot {
+  width: 7px;
+  height: 7px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(148, 180, 210, 0.35);
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.photo-dot.is-active {
+  background: var(--primary-2);
+  transform: scale(1.25);
 }
 
 .hero-animate,
@@ -208,12 +355,36 @@ onMounted(() => {
   }
 }
 
+@keyframes avatarFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes avatarPulse {
+  0%, 100% {
+    box-shadow:
+      0 18px 40px rgba(2, 8, 20, 0.35),
+      0 0 0 0 rgba(77, 163, 255, 0.2);
+  }
+  50% {
+    box-shadow:
+      0 22px 48px rgba(2, 8, 20, 0.4),
+      0 0 0 10px rgba(77, 163, 255, 0.08);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .hero-animate,
-  .hero-animate-side {
+  .hero-animate-side,
+  .avatar-stage,
+  .avatar-wrap {
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;
+  }
+
+  .photo-strip-img {
+    transition: none;
   }
 }
 
@@ -245,10 +416,17 @@ onMounted(() => {
 
   .hero-side {
     order: -1;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: min(340px, 100%);
   }
 
   .avatar-wrap {
-    width: min(260px, 70vw);
+    width: min(240px, 68vw);
+  }
+
+  .photo-strip-frame {
+    height: 140px;
   }
 }
 
@@ -270,8 +448,12 @@ onMounted(() => {
     width: 100%;
   }
 
+  .photo-strip-frame {
+    height: 120px;
+  }
+
   .avatar-wrap {
-    width: min(220px, 68vw);
+    width: min(200px, 64vw);
   }
 }
 </style>
