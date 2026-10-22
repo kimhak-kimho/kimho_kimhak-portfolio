@@ -120,7 +120,7 @@ const certs = [
     id: 4,
     name: 'English Certificate',
     org: 'PUC',
-    date: 'PUC',
+    date: '2024',
     category: 'Language',
     icon: 'mdi-translate',
     image: englishCert,

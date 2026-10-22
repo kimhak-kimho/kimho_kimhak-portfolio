@@ -3,19 +3,19 @@
     <div class="container">
       <div class="section-head" data-reveal>
         <h2 class="title">Contact Me</h2>
-        <p class="subtitle">Open to opportunities — quick details for HR and recruiters</p>
+        <p class="subtitle">Email, phone, and a short profile for recruiters.</p>
         <div class="section-divider"></div>
       </div>
 
       <div class="contact-layout" data-reveal>
         <article class="contact-card card">
           <div class="contact-intro">
-            <p class="eyebrow">Available for review</p>
+            <p class="eyebrow">Open to work</p>
             <h3>Kimhak Kimho</h3>
             <p class="role">Data Coordinator · Information Technology</p>
             <p class="location">
               <v-icon icon="mdi-map-marker-outline" size="16" />
-              Battambang City, Cambodia
+              Battambang, Cambodia · Open to Phnom Penh
             </p>
           </div>
 
@@ -113,6 +113,7 @@ const primaryContacts = [
 ]
 
 const hrSummary = [
+  'Location: Battambang · open to relocate to Phnom Penh',
   'Education: IT, National University of Battambang',
   'Experience: Data Coordinator at NUBB (September 2023 – October 2026)',
   'Certification: Data Analysis with Python (2026)',

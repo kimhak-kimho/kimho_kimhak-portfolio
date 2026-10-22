@@ -79,26 +79,26 @@ const projects = [
     type: 'Mobile Application',
     icon: 'mdi-calculator-variant-outline',
     logo: logoLoanRiskAnalyzer,
-    tools: ['Version: 1.0.0', 'Khmer UI', 'Finance Calculator'],
+   tools: ['Flutter', 'Khmer UI', 'Finance / credit'],
     metrics: [
-      { value: '1K+', label: 'Downloads' },
-      { value: '4.5', label: 'Rating' }
+      { value: '10+', label: 'Downloads' },
+      { value: '...', label: 'Rating' }
     ],
     link: 'https://play.google.com/store/apps/details?id=com.jkinformation.interest_calculator'
   },
   {
-    title: 'Saving Plan App',
+    title: 'My Savings',
     description:
-      'A savings planning app that helps users set goals, track progress, and build better money habits with clear visual summaries in Khmer.',
+      'A savings app that helps users set goals, track progress, and build better money habits with clear visual summaries in Khmer.',
     type: 'Mobile Application',
     icon: 'mdi-piggy-bank-outline',
     logo: logoSavingPlan,
-    tools: ['Mobile App', 'Khmer UI', 'Savings Planner'],
+    tools: ['Mobile App', 'Savings Planner', 'Goals & tracking'],
     metrics: [
-      { value: '1K+', label: 'Downloads' },
-      { value: '4.5', label: 'Rating' }
+      { value: 'APK', label: 'Downloads' },
+      { value: 'Coming soon!', label: 'Play store' }
     ],
-    link: 'https://play.google.com/store/apps/details?id=com.jkinformation.interest_calculator'
+    link: 'https://drive.google.com/file/d/1E53cSyt8Eeoifjz290FE-xllEA4IpZZJ/view?usp=sharing'
   },
   {
     title: 'Photos Report',
@@ -107,10 +107,10 @@ const projects = [
     type: 'Mobile Application',
     icon: 'mdi-camera-outline',
     logo: logoPhotoReport,
-    tools: ['Mobile App', 'Khmer UI', 'Photo Report'],
+    tools: ['Flutter', 'Photo Report','Khmer UI', 'Field reporting'],
     metrics: [
-      { value: '1K+', label: 'Downloads' },
-      { value: '4.5', label: 'Rating' }
+      { value: 'APK', label: 'Downloads' },
+      { value: 'In review', label: 'Play Store' }
     ],
     link: 'https://drive.google.com/file/d/1gzxXNROVd3bB_hytXhRK5sm_IYRsubxy/view?usp=sharing'
   },
@@ -119,12 +119,12 @@ const projects = [
     description:
       'Automatically scans every file uploaded to a Telegram group with ClamAV, deletes infected files, and never falsely reports a file as safe if the scanner is unavailable.',
     type: 'TelegramBot',
-    icon: 'mdi-calculator-variant-outline',
+    icon: 'mdi-shield-check-outline',
     logo: logoVirusDetection,
-    tools: ['Mobile App', 'Khmer UI', 'Finance Calculator'],
+    tools: ['Python', 'Telegram Bot API', 'ClamAV'],
     metrics: [
-      { value: '1K+', label: 'Downloads' },
-      { value: '4.5', label: 'Rating' }
+      { value: 'ClamAV', label: 'Scanner' },
+      { value: 'Auto', label: 'File cleanup' },
     ],
     link: 'https://t.me/nubb_detection_file_Bot'
   },
@@ -135,10 +135,10 @@ const projects = [
     type: 'TelegramBot',
     icon: 'mdi-calculator-variant-outline',
     logo: logoAcademicAffairs,
-    tools: ['Mobile App', 'Khmer UI', 'Finance Calculator'],
+    tools: ['Python', 'Telegram Bot API', 'Academic results'],
     metrics: [
-      { value: '1K+', label: 'Downloads' },
-      { value: '4.5', label: 'Rating' }
+      { value: 'Live', label: 'Status' },
+    { value: '2025–26', label: 'Academic year' },
     ],
     link: 'https://t.me/NubbTechnology2026_bot'
   },

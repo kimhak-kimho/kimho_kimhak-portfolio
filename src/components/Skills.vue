@@ -36,7 +36,7 @@ const skills = [
   {
     name: 'Python',
     abbrev: 'Py',
-    details: 'Pandas, Matplotlib, Data Analysis',
+    details: 'Pandas, Matplotlib, Data Analysis, Data Visualization ',
   },
   {
     name: 'SQL',

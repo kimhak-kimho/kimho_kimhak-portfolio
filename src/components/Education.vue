@@ -58,6 +58,10 @@
 
             <div class="entry-copy">
               <h3 class="school">{{ item.school }}</h3>
+              <p v-if="item.address" class="address">
+                <v-icon icon="mdi-map-marker-outline" size="16" />
+                {{ item.address }}
+              </p>
               <p v-if="item.program" class="program">
                 <v-icon icon="mdi-school-outline" size="16" />
                 {{ item.program }}
@@ -118,7 +122,7 @@ const items = [
     program: 'Master’s Degree in Management Information Systems',
     period: '2026 – 2028',
     year: '2026',
-    detail: 'Start: 10 November 2026',
+    detail: 'Start: 07 November 2026',
     scholarship: 'Scholarship by EU',
     isCurrent: false,
     documents: [
@@ -188,6 +192,7 @@ const items = [
     program: null,
     period: '2018 – 2021',
     year: '2018',
+    address: 'Mongkol Borey district, Banteay Meanchey Province',
     detail: null,
     isCurrent: false,
   },
@@ -196,6 +201,7 @@ const items = [
     program: null,
     period: '2015 – 2018',
     year: '2015',
+    address: 'Mongkol Borey district, Banteay Meanchey Province',
     detail: null,
     isCurrent: false,
   },
@@ -402,6 +408,22 @@ const items = [
   margin: 0 0 0.5rem;
   font-size: 1.25rem;
   font-weight: 700;
+}
+
+.address {
+  margin: 0.35rem 0 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.45rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.address :deep(.v-icon) {
+  color: var(--primary);
+  flex-shrink: 0;
+  margin-top: 0.1rem;
 }
 
 .program {
