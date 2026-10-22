@@ -112,7 +112,7 @@ const projects = [
       { value: '1K+', label: 'Downloads' },
       { value: '4.5', label: 'Rating' }
     ],
-    link: 'https://play.google.com/store/apps/details?id=com.jkinformation.interest_calculator'
+    link: 'https://drive.google.com/file/d/1gzxXNROVd3bB_hytXhRK5sm_IYRsubxy/view?usp=sharing'
   },
   {
     title: 'Telegram Group Virus Detection Bot',
@@ -126,7 +126,7 @@ const projects = [
       { value: '1K+', label: 'Downloads' },
       { value: '4.5', label: 'Rating' }
     ],
-    link: 'https://play.google.com/store/apps/details?id=com.jkinformation.interest_calculator'
+    link: 'https://t.me/nubb_detection_file_Bot'
   },
   {
     title: 'NUBB-Sent-academic-result-2025-2026',
@@ -140,7 +140,7 @@ const projects = [
       { value: '1K+', label: 'Downloads' },
       { value: '4.5', label: 'Rating' }
     ],
-    link: 'https://play.google.com/store/apps/details?id=com.jkinformation.interest_calculator'
+    link: 'https://t.me/NubbTechnology2026_bot'
   },
   {
     title: 'Loan Default Risk Analysis',

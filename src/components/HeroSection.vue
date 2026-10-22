@@ -32,12 +32,15 @@
         </div>
       </aside>
     </div>
+
+    <Highlights class="hero-animate" />
   </section>
 </template>
 
 <script setup>
 import { onMounted, ref } from 'vue'
 import profileImage from '../assets/profile2026.jpg'
+import Highlights from './Highlights.vue'
 
 const isLoaded = ref(false)
 
@@ -51,7 +54,7 @@ onMounted(() => {
 <style scoped>
 .hero {
   position: relative;
-  padding: 2.75rem 0 2rem;
+  padding: 2.75rem 0 1.75rem;
   overflow: hidden;
 }
 
@@ -193,7 +196,8 @@ onMounted(() => {
   transform: translateX(20px);
 }
 
-.hero.is-loaded .hero-animate {
+.hero.is-loaded .hero-animate,
+.hero.is-loaded :deep(.hero-highlights.hero-animate) {
   animation: fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
@@ -201,6 +205,12 @@ onMounted(() => {
 .hero.is-loaded .hero-title { animation-delay: 0.15s; }
 .hero.is-loaded .hero-summary { animation-delay: 0.28s; }
 .hero.is-loaded .hero-cta { animation-delay: 0.4s; }
+.hero.is-loaded :deep(.hero-highlights.hero-animate) { animation-delay: 0.5s; }
+
+.hero :deep(.hero-highlights.hero-animate) {
+  opacity: 0;
+  transform: translateY(18px);
+}
 
 .hero.is-loaded .hero-animate-side {
   animation: fadeIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.2s forwards;
