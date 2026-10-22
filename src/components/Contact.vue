@@ -126,6 +126,11 @@ const otherLinks = [
     href: 'https://www.facebook.com/kimho.kimhak/',
     icon: 'mdi-facebook',
   },
+  {
+    label: 'Verify AWS Certification',
+    href: 'https://cp.certmetrics.com/amazon/en/public/verify/credential/02a74d301f7647a68eded91b6be6d09c',
+    icon: 'mdi-shield-check-outline',
+  },
 ]
 </script>
 

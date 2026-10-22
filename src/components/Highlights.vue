@@ -75,64 +75,51 @@
 import { computed, onMounted, onUnmounted, ref } from 'vue'
 
 import photoAws from '../assets/photosSlide/photo_2026-10-21_19-21-11.jpg'
-import photoField from '../assets/photosSlide/photo_2026-10-21_19-21-12.jpg'
-import photoCommunity from '../assets/photosSlide/photo_2026-10-21_19-21-13.jpg'
-import photoDashboard from '../assets/photosSlide/photo_2026-10-21_19-21-14.jpg'
-import photoCohort from '../assets/photosSlide/photo_2026-10-21_19-21-15.jpg'
 import photoIctWorkshop from '../assets/photosSlide/photo_2026-10-21_19-21-16.jpg'
-import photoCapstone from '../assets/photosSlide/photo_2026-10-21_19-21-17.jpg'
-import photoDataWorkshop from '../assets/photosSlide/photo_2026-10-06_21-53-03.jpg'
+import photoUsaid from '../assets/photosSlide/USAID.jpg'
+import photoDataPython from '../assets/photosSlide/Data with python.jpg'
+import photoNubbStaff from '../assets/photosSlide/NUBBStaff.jpg'
+import photoGrand12 from '../assets/photosSlide/Grand12.jpg'
 
 const INTERVAL_MS = 3000
 
 const highlights = [
+
   {
-    src: photoAws,
-    alt: 'AWS Academy certificate ceremony',
-    title: 'AWS Academy',
-    description: 'Certificate of Completion from AWS Academy training.',
+    src: photoDataPython,
+    alt: 'Certificate presentation for data work with Python',
+    title: 'Data with Python',
+    description: 'Certified in data analysis with Python — Dichi Academy',
   },
-  {
-    src: photoDataWorkshop,
-    alt: 'Data analytics workshop group photo',
-    title: 'Data Analytics',
-    description: 'Built dashboards with Google Looker Studio.',
-  },
-  {
-    src: photoDashboard,
-    alt: 'Presenting an ASEAN statistical dashboard',
-    title: 'Dashboard Presentation',
-    description: 'Presented analytical charts in class.',
-  },
-  {
+   {
     src: photoIctWorkshop,
     alt: 'ICT Edge career readiness workshop certificate',
     title: 'ICT Skills Workshop',
     description: 'Asia Foundation ICT Edge skills workshop.',
   },
-  {
-    src: photoCapstone,
-    alt: 'Smart library management system project defense',
-    title: 'Project Defense',
-    description: 'Smart Library System with RFID and QR.',
+    {
+    src: photoNubbStaff,
+    alt: 'Receiving NUBB staff certificate at award ceremony',
+    title: 'NUBB Staff Recognition',
+    description: 'Staff certificate at NUBB',
   },
   {
-    src: photoCohort,
-    alt: 'Training cohort with certificates',
-    title: 'Training Cohort',
-    description: 'Completed a skills development program.',
+    src: photoAws,
+    alt: 'AWS Academy certificate ceremony',
+    title: 'AWS Certified Cloud Practitioner',
+    description: 'Certificate of Completion from AWS Academy training.',
   },
   {
-    src: photoCommunity,
-    alt: 'University community event group photo',
-    title: 'Community Event',
-    description: 'University and partner collaboration events.',
+    src: photoUsaid,
+    alt: 'Receiving USAID Digital Workforce Development Scholarship certificate',
+    title: 'USAID Scholarship',
+    description: 'Certificate of Scholarship',
   },
   {
-    src: photoField,
-    alt: 'Field visit group photo at border checkpoint',
-    title: 'Field Engagement',
-    description: 'Institutional and field engagement activities.',
+    src: photoGrand12,
+    alt: 'Receiving Grade 12 completion certificate outdoors',
+    title: 'Grade 12 Completion',
+    description: 'Certificate handover at school ceremony.',
   },
 ]
 

@@ -15,12 +15,12 @@
         </h1>
 
         <p class="hero-summary hero-animate">
-          Turning student and academic data into clear reports that support better decisions.
+          I turn data into clear reports for better decisions.
         </p>
 
         <div class="hero-cta hero-animate">
-          <a class="btn btn-primary" href="#projects">Learn More</a>
-          <a class="btn btn-secondary" href="#contact">Hire Me</a>
+          <a class="btn btn-primary" href="#experience">My work</a>
+          <a class="btn btn-secondary" href="#contact">Contact</a>
         </div>
       </div>
 
