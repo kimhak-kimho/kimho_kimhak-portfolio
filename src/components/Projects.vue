@@ -75,16 +75,16 @@ const projects = [
   {
     title: 'Loan Risk Analyzer',
     description:
-      'A Flutter app that helps Cambodian users estimate how much they can borrow and how risky a loan looks for their budget.It is an educational estimate only. It is not a bank or MFI, and it never approves or rejects a loan.',
+      'A Flutter app that helps Cambodian users estimate how much they can borrow and how risky a loan looks for their budget. It is an educational estimate only. It is not a bank or MFI, and it never approves or rejects a loan.',
     type: 'Mobile Application',
     icon: 'mdi-calculator-variant-outline',
     logo: logoLoanRiskAnalyzer,
    tools: ['Flutter', 'Khmer UI', 'Finance / credit'],
     metrics: [
-      { value: '10+', label: 'Downloads' },
-      { value: '...', label: 'Rating' }
+      { value: 'APK', label: 'Downloads' },
+      { value: 'In review', label: 'Play Store' }
     ],
-    link: 'https://play.google.com/store/apps/details?id=com.jkinformation.interest_calculator'
+    link: 'https://drive.google.com/drive/folders/1CE9198bFjvprHm9hu53OMsLsTIDU-3R-',
   },
   {
     title: 'My Savings',
