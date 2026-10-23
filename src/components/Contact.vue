@@ -11,7 +11,7 @@
         <article class="contact-card card">
           <div class="contact-intro">
             <p class="eyebrow">Open to work</p>
-            <h3>Kimhak Kimho</h3>
+            <h3>KIMHO KIMHAK</h3>
             <p class="role">Data Coordinator · Information Technology</p>
             <p class="location">
               <v-icon icon="mdi-map-marker-outline" size="16" />
