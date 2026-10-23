@@ -81,10 +81,10 @@ const projects = [
     logo: logoLoanRiskAnalyzer,
    tools: ['Flutter', 'Khmer UI', 'Finance / credit'],
     metrics: [
-      { value: 'APK', label: 'Downloads' },
-      { value: 'In review', label: 'Play Store' }
+      { value: '10+', label: 'Downloads' },
+      { value: 'Not yet', label: 'Rating' }
     ],
-    link: 'https://drive.google.com/drive/folders/1CE9198bFjvprHm9hu53OMsLsTIDU-3R-',
+    link: 'https://play.google.com/store/apps/details?id=com.loanriskanalyzer.app',
   },
   {
     title: 'My Savings',
