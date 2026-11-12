@@ -122,7 +122,7 @@ const items = [
     program: 'Master’s Degree in Management Information Systems',
     period: '2026 – 2028',
     year: '2026',
-    detail: 'Start: 07 November 2026',
+    detail: 'Year1 Semester1',
     scholarship: 'Scholarship by EU',
     isCurrent: false,
     documents: [
